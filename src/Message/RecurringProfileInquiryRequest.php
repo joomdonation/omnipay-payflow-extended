@@ -47,9 +47,9 @@
 
         public function sendData($data)
         {
-            $httpResponse = $this->httpClient->post($this->getEndpoint(), null, $this->encodeData($data))->send();
+            $httpResponse = $this->httpClient->request('POST', $this->getEndpoint(), [], $this->encodeData($data));
 
-            return $this->response = new RecurringProfileInquiryResponse($this, $httpResponse->getBody());
+            return $this->response = new RecurringProfileInquiryResponse($this, $httpResponse->getBody()->getContents());
         }
 
 
