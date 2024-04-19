@@ -22,8 +22,7 @@
         "psr-4": { "Omnipay\\PayflowExtended\\" : "src/" }
     }
     , "require": {
-        "omnipay/common": "^3"
-        , "omnipay/payflow": "^3.0"
+        "omnipay/common": "^3"       
     }
     , "require-dev": {
         "omnipay/tests": "^3"
